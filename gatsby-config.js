@@ -16,7 +16,7 @@ module.exports = {
   siteMetadata: {
     title: `My Gatsby portfolio Site`,
     description: `This is my first gatsby project`,
-    author: `igge`,
+    author: `Ignacio Tapia`,
   },
   plugins: [
     `gatsby-plugin-image`,

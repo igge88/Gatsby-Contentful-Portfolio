@@ -1,11 +1,21 @@
 import * as React from "react"
 import Seo from "../components/seo"
+import { GatsbyImage } from "gatsby-plugin-image"
+import { Helmet } from "react-helmet"
 
-const HomeTemplate = props => {
+const HomeTemplate = contentfulPage => {
   return (
-    <main>
-      <h2>{props.title}</h2>
-    </main>
+    <>
+      <Helmet>
+        <title>Home page</title>
+        <meta name="description" content="Description of home" />
+      </Helmet>
+      <h2>{contentfulPage.title}</h2>
+      <GatsbyImage
+      alt={contentfulPage.title}
+      image={contentfulPage.image.gatsbyImage}
+      />
+    </>
   )
 }
 

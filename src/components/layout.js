@@ -4,6 +4,8 @@ import useNavigation from "../hooks/use-navigation"
 import Header from "./header"
 import "./layout.css"
 import { Link } from "gatsby"
+import { Helmet } from "react-helmet"
+
 
 const Layout = ({ children }) => {
   const navigation = useNavigation() // edges.node.title
@@ -13,6 +15,7 @@ const Layout = ({ children }) => {
       site {
         siteMetadata {
           title
+          author
         }
       }
     }
@@ -20,6 +23,9 @@ const Layout = ({ children }) => {
 
   return (
     <>
+    <Helmet>
+        <meta name="author" content={data.site.siteMetadata.author}/>
+    </Helmet>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div
         style={{
