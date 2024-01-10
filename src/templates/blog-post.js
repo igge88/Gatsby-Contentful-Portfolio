@@ -2,8 +2,6 @@ import React from "react"
 import { graphql, Link } from "gatsby"
 import { GatsbyImage } from "gatsby-plugin-image"
 // import { documentToReactComponents } from "@contentful/rich-text-react-renderer"
-
-
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 // import Img from 'gatsby-image';

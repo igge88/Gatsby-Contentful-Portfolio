@@ -1,5 +1,5 @@
 import * as React from "react"
-import Seo from "../components/seo"
+import SEO from "../components/seo"
 import { GatsbyImage } from "gatsby-plugin-image"
 import { Helmet } from "react-helmet"
 
@@ -21,4 +21,4 @@ const ContactTemplate = contentfulPage => {
 
 export default ContactTemplate
 
-export const Head = () => <Seo title="Contact" />
+export const Head = () => <SEO title="Contact" />
