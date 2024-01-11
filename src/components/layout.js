@@ -2,6 +2,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import useNavigation from "../hooks/use-navigation"
 import Header from "./header"
+import Footer from "./footer"
 import "./layout.css"
 import { Link } from "gatsby"
 import { Helmet } from "react-helmet"
@@ -27,7 +28,7 @@ const Layout = ({ children }) => {
         <meta name="author" content={data.site.siteMetadata.author}/>
     </Helmet>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
-      <div
+      <div className="article"
         style={{
           margin: `0 auto`,
           maxWidth: `var(--size-content)`,
@@ -49,7 +50,8 @@ const Layout = ({ children }) => {
         </nav>
 
         <main>{children}</main>
-        <footer
+
+        {/* <footer
           style={{
             marginTop: `var(--space-5)`,
             fontSize: `var(--font-sm)`,
@@ -58,8 +60,9 @@ const Layout = ({ children }) => {
           © {new Date().getFullYear()} &middot; Built with
           {` `}
           <a href="https://www.gatsbyjs.com">Gatsby</a>
-        </footer>
+        </footer> */}
       </div>
+      <Footer/>
     </>
   )
 }

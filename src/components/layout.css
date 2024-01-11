@@ -34,9 +34,11 @@ html {
   overflow-y: scroll;
 }
 body {
+  background-color: #1a1a1a;
   -moz-osx-font-smoothing: grayscale;
   -webkit-font-smoothing: antialiased;
-  color: var(--color-text);
+  /* color: var(--color-text); */
+  color: white;
   font-family: sans-serif;
   font-family: var(--font-sans);
   font-weight: normal;
@@ -273,4 +275,74 @@ pre tt:after {
   display: flex;
   justify-content: center;
   height: 500px;
+}
+
+/* .article {
+  background-color: rgb(224, 224, 224);
+} */
+
+/*-----------------Header----------------*/
+
+header {
+  background-color: black;
+  color: white;
+  padding: var(--space-4) var(--size-gutter);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+header a {
+  color: white;
+  text-decoration: none;
+  font-size: var(--font-sm);
+}
+
+header img {
+  height: 25px;
+  margin: 0;
+}
+
+/*-----------------Nav---------------- */
+
+nav {
+  margin-top: var(--space-3);
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+  text-align: center; /* Center the list items */
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+nav a {
+  text-decoration: none;
+  /* color: #333333; */
+  color: white;
+  font-size: var(--font-sm);
+}
+
+nav a:hover {
+  color: #d12ad1; /* Change the color on hover */
+}
+
+/*----------------Footer-----------------*/
+
+footer {
+  width: 100%;
+  background-color: black;
+  color: white;
+  text-align: center;
+  padding: var(--space-5) var(--size-gutter);
+  font-size: var(--font-sm);
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
 }

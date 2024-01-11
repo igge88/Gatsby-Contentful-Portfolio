@@ -11,7 +11,7 @@ const HomeTemplate = contentfulPage => {
         <title>Home page</title>
         <meta name="description" content="Description of home" />
       </Helmet>
-      <h2>{contentfulPage.title}</h2>
+      {/* <h2>{contentfulPage.title}</h2> */}
       <GatsbyImage
         alt={contentfulPage.title}
         image={contentfulPage.image.gatsbyImage}
