@@ -14,6 +14,11 @@ export const query = graphql`
       featuredImage {
         gatsbyImage(width: 350)
       }
+      excerpt {
+        childMarkdownRemark {
+          excerpt(pruneLength: 150)
+        }
+      }
     }
   }
 `
@@ -22,7 +27,7 @@ const BlogPost = props => {
   return (
     <Layout>
       <SEO title={props.data.contentfulBlogPost.title} />
-      <Link to="/blog/">Visit the Blog Page</Link>
+      <Link to="/blog/">Back to Portfolio</Link>
       <div className="content">
         <h1>{props.data.contentfulBlogPost.title}</h1>
         <span className="meta">
@@ -36,6 +41,9 @@ const BlogPost = props => {
             alt={props.data.contentfulBlogPost.title}
           />
         )}
+        <p className="excerpt">
+                {props.data.contentfulBlogPost.excerpt.childMarkdownRemark.excerpt}
+              </p>
 
         {/* {documentToReactComponents(props.data.contentfulBlogPost.body.raw)} */}
       </div>

@@ -39,6 +39,7 @@ const Layout = ({ children }) => {
         <nav>
           <ul style={{ listStyle: "none", padding: 0 }}>
             {navigation.map(({ node }) => (
+                node.url != '/404' &&
               <li
                 key={node.id}
                 style={{ display: "inline-block", marginRight: "10px" }}

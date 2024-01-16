@@ -280,6 +280,15 @@ pre tt:after {
 /* .article {
   background-color: rgb(224, 224, 224);
 } */
+.article {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Set minimum height to full viewport height */
+  }
+
+  main {
+    flex: 1; /* Allow main content to grow and take up available space */
+  }
 
 /*-----------------Header----------------*/
 
