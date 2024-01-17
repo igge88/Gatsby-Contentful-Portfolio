@@ -22,21 +22,20 @@ const HomeTemplate = contentfulPage => {
           image={contentfulPage.image.gatsbyImage}
         />
 
-        <div className="content-rich">
+        {/* <div className="content-rich">
           {renderRichText(contentfulPage.content, {
-            /* Pass your rendering options here */
             renderNode: {
-              // Define how different content types should be rendered
+
               "embedded-asset-block": node => (
                 <GatsbyImage
                   alt={node.data.target.title}
                   image={node.data.target.gatsbyImageData}
                 />
               ),
-              // Add more renderings for other content types as needed
+
             },
           })}
-        </div>
+        </div> */}
       </div>
     </>
   )

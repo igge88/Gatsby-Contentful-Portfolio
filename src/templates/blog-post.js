@@ -16,7 +16,7 @@ export const query = graphql`
       }
       excerpt {
         childMarkdownRemark {
-          excerpt(pruneLength: 150)
+          excerpt(pruneLength: 500)
         }
       }
     }
@@ -24,6 +24,7 @@ export const query = graphql`
 `
 
 const BlogPost = props => {
+
   return (
     <Layout>
       <SEO title={props.data.contentfulBlogPost.title} />
@@ -42,8 +43,8 @@ const BlogPost = props => {
           />
         )}
         <p className="excerpt">
-                {props.data.contentfulBlogPost.excerpt.childMarkdownRemark.excerpt}
-              </p>
+          {props.data.contentfulBlogPost.excerpt.childMarkdownRemark.excerpt}
+        </p>
 
         {/* {documentToReactComponents(props.data.contentfulBlogPost.body.raw)} */}
       </div>
