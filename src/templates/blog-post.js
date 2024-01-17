@@ -30,9 +30,9 @@ const BlogPost = props => {
       <Link to="/blog/">Back to Portfolio</Link>
       <div className="content">
         <h1>{props.data.contentfulBlogPost.title}</h1>
-        <span className="meta">
+        {/* <span className="meta">
           Posted on {props.data.contentfulBlogPost.publishedDate}
-        </span>
+        </span> */}
 
         {props.data.contentfulBlogPost.featuredImage && (
           <GatsbyImage

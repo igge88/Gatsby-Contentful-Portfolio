@@ -41,9 +41,9 @@ const Blog = () => {
               <h2>
                 <Link to={`/blog/${edge.node.slug}/`}>{edge.node.title}</Link>
               </h2>
-              <div className="meta">
+              {/* <div className="meta">
                 <span>Posted on {edge.node.publishedDate}</span>
-              </div>
+              </div> */}
               {edge.node.featuredImage && (
                 <GatsbyImage
                   className="featured"
