@@ -12,7 +12,7 @@ export const query = graphql`
       title
       publishedDate(formatString: "Do MMMM, YYYY")
       featuredImage {
-        gatsbyImage(width: 350)
+        gatsbyImage(width: 450)
       }
       excerpt {
         childMarkdownRemark {
@@ -24,7 +24,6 @@ export const query = graphql`
 `
 
 const BlogPost = props => {
-
   return (
     <Layout>
       <SEO title={props.data.contentfulBlogPost.title} />
