@@ -16,7 +16,7 @@ const Blog = () => {
             slug
             publishedDate(formatString: "DD MMMM, YYYY")
             featuredImage {
-              gatsbyImage(width: 300)
+              gatsbyImage(width: 500)
             }
             excerpt {
               childMarkdownRemark {
