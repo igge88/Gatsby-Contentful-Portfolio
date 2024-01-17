@@ -12,7 +12,7 @@ export const query = graphql`
       title
       publishedDate(formatString: "Do MMMM, YYYY")
       featuredImage {
-        gatsbyImage(width: 450)
+        gatsbyImage(width: 1000)
       }
       excerpt {
         childMarkdownRemark {
